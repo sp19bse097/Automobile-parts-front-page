@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="html/text";charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style type="text/CSS">
+body, html{
+  margin:0;
+  padding:0;
+  background-image: url(bgbg.jpg); 
+  font-family:Cutive monospace;
+  line-height: normal;
+}
+
+#container{
+background-position: center;
+position: absolute;
+width: 100%;
+height: 100%; 
+background-image: url(mainbg.jpg);
+background-size: cover;
+border:15px solid red;
+font-size: 35px;
+}
+.text{
+grid-area: header; 
+background-color: grey;
+height:170px;
+width:auto;
+color:black;
+text-align:center;
+font-size:50px;
+border-top-style: none;
+border-left-style: none;
+border-right-style: none;
+border-bottom-style: none;
+image-wrap:no-wrap;
+}
+.intro{
+grid-area: intro;
+background-color:#FFD700;
+background-blend-mode: lighten;
+font-family:Andale Mono, monospace; 
+text-align:center;
+height:auto;
+width:100%;
+color: black;
+font-size:20px;
+letter-spacing:0px;
+
+
+}
+.nissandropdown{
+grid-area: niss;
+position: static;
+display:inline-block;
+margin:10px;
+}
+.toyotadropdown{
+grid-area: toyota;
+position: static;
+display:inline-block;
+margin:10px;
+}
+.mazdadropdown{
+grid-area: mazda;
+position: static;
+display:inline-block;
+margin:10px;
+}
+.mitsudropdown{
+grid-area: mitsu;
+position: static;
+display:inline-block;
+margin:10px;
+}
+.hyundaidropdown{
+grid-area: hyundai;
+position: static;
+display:inline-block;
+margin:10px;
+}
+.suzukidropdown{
+grid-area: suzuki;
+position: static;
+display:inline-block;
+margin:10px;
+}
+.hondadropdown{
+grid-area: honda;
+position: static;
+display:inline-block;
+margin:10px;
+}
+
+
+.dropdowncontent{
+display:none;
+border-radius: 25px;
+postion:absolute;
+background-color: black;
+padding:15px;
+}
+.nissandropdown:hover .dropdowncontent{
+display:block;
+}
+.toyotadropdown:hover .dropdowncontent{
+display:block;
+}
+.mitsudropdown:hover .dropdowncontent{
+display:block;
+}
+.hondadropdown:hover .dropdowncontent{
+display:block;
+}
+.suzukidropdown:hover .dropdowncontent{
+display:block;
+}
+.mazdadropdown:hover .dropdowncontent{
+display:block;
+}
+.hyundaidropdown:hover .dropdowncontent{
+display:block;
+}
+.dropdownbutton{
+border-radius: 20px;
+color:white;
+padding:0px;
+margin: 5px;
+background-color: black;
+font-size: 25px;
+opacity: 0.5;
+}
+.dropdownbutton:hover {
+opacity:1;
+}
+.dropdowncontent a{
+display:block;
+
+color: white;
+padding: 0px;
+border-radius: 25px;
+background-color: none;
+
+}
+.dropdowncontent a:hover{
+background-color: grey;
+}
+.dropdowncontent:hover{
+box-shadow: 0px 8px 16px 0px white;
+}
+dropdowncontent table, tr, td {
+  border-collapse: collapse;
+}
+
+.image {
+
+ transform: rotateY(180deg);
+ }
+ .grid-container{
+ display: grid;
+ grid-gap: 5px;
+ grid-template-areas:'intros intros intros intros intros intros'
+					 'niss . mitsu . hyundai . '
+					 'toyota . suzuki . honda . '
+					 ' mazda . . . . .'
+					 'footer footer footer footer footer footer'
+					 ;
+ }
+ .input-group{
+ grid-area: ins;
+ }
+.intros{
+grid-area: intros;
+}
+.footer{
+height:50px;
+text-align:  center;
+width: 100%;
+background-color: grey;
+font-size: 25px;
+grid-area:footer;
+padding-top:5px;
+font-family:Cutive monospace; 
+}
+
+</style>
+<body>
+<div class="grid-container">
+<div class="intros">
+<div class="text"><img class="imageinvert" src="asda.png" height="100" width="300">The BodyShop<img src="asda.png" height="100" width="300" class="image"><br><span style="font-size:30px">Automobile Aesthetics<span></div>
+<div class="intro">Welcome! Search by product name or browse by car manufacturer</div>
+<div class="input-group">
+
+  <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+    aria-describedby="search-addon" />
+  <button type="button" class="btn btn-outline-primary">search</button>
+</div>
+</div>
+<div class="nissandropdown">
+<button class="dropdownbutton"><img src="nissan.png" height="200px" width="200px" alt="Nissan"></button>
+<div class="dropdowncontent"><table>
+<tr><td><a href="#">Skyline</a></td></tr>
+<tr><td><a href="#">240SX</a></td></tr>
+<tr><td><a href="#">350-Z</a></td></tr>
+<tr><td><a href="#">Silvia S13</a></td></tr>
+</table>
+</div>
+</div>
+<div class="toyotadropdown">
+
+<button class="dropdownbutton"><img src="toyota.png" height="200px" width="200px" alt="Toyota"></button>
+<div class="dropdowncontent"><table>
+<tr><td><a href="#">Supra</a></td></tr>
+<tr><td><a href="#">AE-86</a></td></tr>
+<tr><td><a href="#">Corolla</a></td></tr>
+<tr><td><a href="#">Corona</a></td></tr>
+</table>
+</div>
+
+
+</div>
+<div class="hyundaidropdown">
+
+<button class="dropdownbutton"><img src="hyundai.png" height="200px" width="200px" alt="Toyota"></button>
+<div class="dropdowncontent"><table>
+<tr><td><a href="#">Sonata</a></td></tr>
+<tr><td><a href="#">Elantra</a></td></tr>
+<tr><td><a href="#">Santro</a></td></tr>
+<tr><td><a href="#">Santa-Fe</a></td></tr>
+</table>
+</div>
+
+
+</div>
+<div class="hondadropdown">
+
+<button class="dropdownbutton"><img src="honda.jpg" height="200px" width="200px" alt="Toyota"></button>
+<div class="dropdowncontent"><table>
+<tr><td><a href="#">Civic</a></td></tr>
+<tr><td><a href="#">NSX</a></td></tr>
+<tr><td><a href="#">S2000</a></td></tr>
+<tr><td><a href="#">City</a></td></tr>
+</table>
+</div>
+
+
+</div>
+<div class="mitsudropdown">
+
+<button class="dropdownbutton"><img src="mitsu.png" height="200px" width="200px" alt="Toyota"></button>
+<div class="dropdowncontent"><table>
+<tr><td><a href="#">Evolution VII</a></td></tr>
+<tr><td><a href="#">Evolution X</a></td></tr>
+<tr><td><a href="#">Mirage</a></td></tr>
+<tr><td><a href="#">Outlander</a></td></tr>
+</table>
+</div>
+
+
+</div>
+<div class="suzukidropdown">
+
+<button class="dropdownbutton"><img src="suzuki.jpg" height="200px" width="200px" alt="Toyota"></button>
+<div class="dropdowncontent"><table>
+<tr><td><a href="#">Mehran</a></td></tr>
+<tr><td><a href="#">Cultas</a></td></tr>
+<tr><td><a href="#">Baleno</a></td></tr>
+<tr><td><a href="#">Bolan</a></td></tr>
+</table>
+</div>
+
+
+</div>
+<div class="mazdadropdown">
+
+<button class="dropdownbutton"><img src="mazda.jpg" height="200px" width="200px" alt="Toyota"></button>
+<div class="dropdowncontent"><table>
+<tr><td><a href="#">RX-7</a></td></tr>
+<tr><td><a href="#">RX-8</a></td></tr>
+<tr><td><a href="#">MX-5</a></td></tr>
+</table>
+</div>
+
+
+</div>
+<div class="footer"><p>The BodyShop © 2021</p></div>
+</div>
+</body>
+</html>
